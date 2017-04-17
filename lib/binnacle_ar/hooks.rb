@@ -37,8 +37,8 @@ module BinnacleAr
       end
 
       def signal(method)
-        @binnacle_client.signal_asynch(ENV['BINNACLE_AR_CTX'], method,
-                                                   self.class.to_s.underscore,
+        @binnacle_client.signal_asynch(ENV['BINNACLE_AR_CHANNEL'], "#{method}_#{self.class.to_s.underscore}",
+                                                   nil,
                                                    nil,
                                                    'INFO',
                                                    [],
